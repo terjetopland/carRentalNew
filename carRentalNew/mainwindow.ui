@@ -6,56 +6,584 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>462</width>
-    <height>349</height>
+    <width>991</width>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>461</width>
-      <height>331</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetNoConstraint</enum>
-     </property>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_customers">
+       <attribute name="title">
+        <string>Customers</string>
+       </attribute>
+       <widget class="QTableView" name="tableView_customer">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>210</y>
+          <width>921</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::AllEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>671</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Customer</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>404</width>
+           <height>158</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="1" column="0">
+           <widget class="QLabel" name="Label_customer_name">
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="LineEdit_customer_name"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="Label_customer_email">
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="LineEdit_customer_email"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="Label_customer_phone">
+            <property name="text">
+             <string>Phone</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="LineEdit_customer_phone"/>
+          </item>
+          <item row="4" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QPushButton" name="pushButton_customer_add">
+              <property name="text">
+               <string>Add</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_customer_update">
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_customer_delete">
+              <property name="text">
+               <string>Delete</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_customer_clear">
+              <property name="text">
+               <string>Clear all</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="LineEdit_customer_id">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="Label_customer_id">
+            <property name="text">
+             <string>Id</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>30</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2"/>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>70</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLineEdit" name="lineEdit_customer_search">
+            <property name="placeholderText">
+             <string>Search</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_listAll">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>130</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>List all </string>
+         </property>
+        </widget>
+       </widget>
       </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
+      <widget class="QWidget" name="tab_cars">
+       <attribute name="title">
+        <string>Cars</string>
+       </attribute>
+       <widget class="QTableView" name="tableView_car">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>210</y>
+          <width>921</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::AllEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>671</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Car</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>404</width>
+           <height>158</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="1" column="0">
+           <widget class="QLabel" name="Label_car_brand">
+            <property name="text">
+             <string>Brand</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="LineEdit_car_brand"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="Label_car_model">
+            <property name="text">
+             <string>Model</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="LineEdit_car_model"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="Label_car_year">
+            <property name="text">
+             <string>Year</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="LineEdit_car_year"/>
+          </item>
+          <item row="4" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QPushButton" name="pushButton_car_add">
+              <property name="text">
+               <string>Add</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_car_update">
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_car_delete">
+              <property name="text">
+               <string>Delete</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_car_clear">
+              <property name="text">
+               <string>Clear all</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="LineEdit_car_reg_nr">
+            <property name="readOnly">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="Label_car_reg_nr">
+            <property name="text">
+             <string>Reg.nr</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_7">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>30</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8"/>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_8">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>70</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLineEdit" name="lineEdit_car_search">
+            <property name="placeholderText">
+             <string>Search</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_car_listAll">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>130</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>List all </string>
+         </property>
+        </widget>
+       </widget>
       </widget>
-     </item>
-    </layout>
-   </widget>
+      <widget class="QWidget" name="tab_orders">
+       <attribute name="title">
+        <string>Orders</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>40</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_orders_search">
+           <property name="placeholderText">
+            <string>Search</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>0</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QPushButton" name="pushButton_addOrder">
+           <property name="text">
+            <string>Add order</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>462</width>
-     <height>17</height>
+     <width>991</width>
+     <height>16</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_customer_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_customer_phone</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>436</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_customer_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_customer_email</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>436</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_customer_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_customer_name</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>436</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_customer_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_customer_id</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>430</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_customer_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_customer_search</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>373</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>506</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_car_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_car_year</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>364</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_car_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_car_model</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>160</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_car_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_car_brand</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>396</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_car_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>LineEdit_car_reg_nr</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>404</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_car_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_car_search</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>431</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
